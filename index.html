@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+:root{
+--back_color: #221F2E;
+--front_color: #2E2B3F;
+--cyan: #99CEFE;
+--blue: #3A8AFC;
+}
+
+*{
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+background: var(--back_color);
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.vcard{
+width: 450px;
+height: 550px;
+background: var(--front_color);
+border-radius: 8px;
+box-shadow: 5px 0px 20px rgba(0,0,0,39%);
+}
+
+.header{
+height: 40%;
+position: relative;
+}
+
+.wave_bg{
+border-radius: 8px;
+position: relative;
+height: 100%;
+overflow: hidden;
+}
+
+.wave-01{
+position: absolute;
+width: 600px;
+height: 600px;
+background: linear-gradient(to top right, var(--blue), var(--cyan));
+border-radius: 50%;
+top: -200%;
+left: -20%;
+animation: rotate 10s linear infinite;
+}
+.wave-02{
+position: absolute;
+width: 600px;
+height: 600px;
+background: linear-gradient(to top right, var(--blue), var(--cyan));
+border-radius: 40%;
+top: -205%;
+left: -22%;
+opacity: 0.5;
+animation: rotate 15s linear infinite;
+}
+.wave-03{
+position: absolute;
+width: 600px;
+height: 600px;
+background: linear-gradient(to top right, var(--blue), var(--cyan));
+border-radius: 45%;
+top: -198%;
+left: -18%;
+opacity: 0.2;
+animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate{
+100%{
+transform: rotate(360deg);
+}
+}
+
+.profile_pic_content{
+width: 130px;
+height: 130px;
+border-radius: 50%;
+position: absolute;
+left: 50%;
+transform: translate(-50%, -50%);
+top: 80%;
+text-align: center;
+}
+.profile_pic_content::after{
+content: '';
+border-radius: 50%;
+width: 100%;
+height: 100%;
+background: linear-gradient(to right, var(--blue), var(--cyan));
+position: absolute;
+top: 8px;
+left: 10px;
+z-index: -1;
+opacity: 0;
+transition: all .7s;
+}
+.profile_pic_content:hover::after{
+opacity: 0.2;
+}
+
+.profile_pic{
+max-width: 100%;
+max-height: 100%;
+border-radius: 50%;
+}
+
+.card_content{
+position: relative;
+top: 7%;
+text-align: center;
+}
+
+.name{
+color: var(--blue);
+font-weight: 700;
+font-size: 1.4em;
+}
+.info{
+margin-top: 5px;
+color: white;
+padding: 0px 10px;
+}
+
+.typed_text{
+text-align: center;
+}
+
+.social{
+color: white;
+padding: 5px;
+margin-top: 55px;
+}
+.social a{
+text-decoration: none;
+color: white;
+}
+.social i{
+padding: 5px;
+}
+.button{
+cursor: pointer;
+display: block;
+text-decoration: none;
+width: 50%;
+margin-top: 10px;
+margin-left: 25%;
+background: linear-gradient(to top right, var(--cyan), var(--blue));
+padding: 10px 20px;
+border-radius: 20px;
+color: white;
+font-weight: bolder;
+transition: all .7s;
+}
+.button:hover{
+box-shadow: 0px 8px 20px rgba(0,0,0,39%);
+}
+</style>
+
+<title>Profile Card</title>
+</head>
+<body>
+<div class="vcard">
+<div class="header">
+<div class="wave_bg">
+<div class="wave-01"></div>
+<div class="wave-02"></div>
+<div class="wave-03"></div>
+</div>
+
+<div class="profile_pic_content">
+<img class="profile_pic" src="https://avatars.githubusercontent.com/u/125739675?v=4">
+</div>
+</div>
+<div class="card_content">
+<div class="name">
+<h4>Im Geek</h4>
+</div>
+<div class="info">
+<h6 class="typed_text">
+ Github(becoming developer).
+    <i><br> Repository: 33</br>
+        2000+ Contribute 
+        10 Followers </i>
+    <br>13 Projects | 7 Certificates<br/>
+</h6>
+</div>
+
+<div class="social">
+<a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+<a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+<a href="https://www.youtube.com/@imegeek"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+</div>
+
+<a href="https://www.github.com/imegeek"class="button">
+Follow me
+</a>
+</div>
+</div>
+</body>
+</html>
